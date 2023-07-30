@@ -14,5 +14,5 @@ pip3 install --user pipenv
 Run the program:
 
 ```bash
-pipenv run python circle_lines.py
+pipenv run python rotating_circles.py
 ```
