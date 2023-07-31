@@ -49,13 +49,13 @@ def draw_circles(window, colors, circle_coords):
 
 def update_text(cset):
     # Create the text surface for angle1
-    cset.angle1_text = cset.font.render("angle1: " + str(round(cset.angles[0], 2)), True, cset.circle2_color)
+    cset.angle1_text = cset.font.render("angle1: " + str(round(cset.angles[0], 2)), True, cset.circle_colors['green'])
 
     # Create the text surface for angle2
-    cset.angle2_text = cset.font.render("angle2: " + str(round(cset.angles[1], 2)), True, cset.circle3_color)
+    cset.angle2_text = cset.font.render("angle2: " + str(round(cset.angles[1], 2)), True, cset.circle_colors['blue'])
 
     # Create the text surface for angle3
-    cset.angle3_text = cset.font.render("angle3: " + str(round(cset.angles[2], 2)), True, cset.circle4_color)
+    cset.angle3_text = cset.font.render("angle3: " + str(round(cset.angles[2], 2)), True, cset.circle_colors['red'])
 
     # Get the rect object for angle1_text
     cset.angle1_rect = cset.angle1_text.get_rect()

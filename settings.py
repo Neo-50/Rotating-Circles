@@ -20,11 +20,6 @@ class Settings:
             'red': (255, 0, 0),
         }
 
-        self.circle1_color = (255, 255, 255)  # White
-        self.circle2_color = (0, 255, 0)  # Green
-        self.circle3_color = (0, 0, 255)  # Blue
-        self.circle4_color = (255, 0, 0)  # Red
-
         # Set circle coordinates
         circles_xy = []
 
