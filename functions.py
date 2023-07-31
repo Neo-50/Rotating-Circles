@@ -47,7 +47,6 @@ def draw_circles(window, colors, circle_coords):
     pygame.draw.circle(window, colors['blue'], (circle_coords[2][0], circle_coords[2][1]), 150, 1)
 
 
-
 def update_text(angles, colors, font, window):
     texts = [
         ("angle1: ", angles[0], colors['green']),
