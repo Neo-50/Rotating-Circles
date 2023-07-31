@@ -27,16 +27,16 @@ def run_game():
         cset.window.fill((0, 0, 0))
 
         # Update the angle
-        gf.update_angle(cset)
+        gf.update_angles(cset.angles, cset.line_speed, cset.line_direction)
 
         # Reset the angle after it passes 360
-        gf.reset_angle(cset)
+        gf.reset_angle(cset.angles)
 
         # Update the coordinates for the centerpoints for each circle
-        gf.update_coords(cset)
+        circle_coords = gf.update_coords(cset.angles, cset.center_x, cset.center_y)
 
         # Draw the circles
-        gf.draw_circles(cset)
+        gf.draw_circles(cset.window, cset.circle_colors, circle_coords)
 
         # Draw and update the text surfaces
         gf.update_text(cset)
