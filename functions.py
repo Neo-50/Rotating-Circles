@@ -48,6 +48,7 @@ def draw_circles(window, colors, circle_coords):
 
 
 def update_text(angles, colors, font, window):
+    # Create text surfaces and rectangles and render to the screen
     texts = [
         ("angle1: ", angles[0], colors['green']),
         ("angle2: ", angles[1], colors['red']),

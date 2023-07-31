@@ -10,6 +10,7 @@ class Settings:
         # Set the dimensions of the window
         self.width, self.height = 800, 800
 
+        # Define window
         self.window = pygame.display.set_mode((self.width, self.height))
 
         # Set the color of the circles
@@ -35,10 +36,5 @@ class Settings:
         # Define the speed of rotation
         self.line_speed = 1
 
-        # Calculate the initial coordinates of the edge of the circle
-        self.edge_x = self.center_x
-        self.edge_y = self.center_y - 200
-
         # Initialize the direction of the line movement
         self.line_direction = 0
-

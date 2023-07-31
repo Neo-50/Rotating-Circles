@@ -44,6 +44,7 @@ def run_game():
         # Update the display
         pygame.display.flip()
 
+        # Frame rate 20FPS
         pygame.time.Clock().tick(20)
 
 
