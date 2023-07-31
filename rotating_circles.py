@@ -39,7 +39,7 @@ def run_game():
         gf.draw_circles(cset.window, cset.circle_colors, circle_coords)
 
         # Draw and update the text surfaces
-        gf.update_text(cset)
+        gf.update_text(cset.angles, cset.circle_colors, cset.font, cset.window)
 
         # Update the display
         pygame.display.flip()

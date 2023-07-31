@@ -47,35 +47,16 @@ def draw_circles(window, colors, circle_coords):
     pygame.draw.circle(window, colors['blue'], (circle_coords[2][0], circle_coords[2][1]), 150, 1)
 
 
-def update_text(cset):
-    # Create the text surface for angle1
-    cset.angle1_text = cset.font.render("angle1: " + str(round(cset.angles[0], 2)), True, cset.circle_colors['green'])
 
-    # Create the text surface for angle2
-    cset.angle2_text = cset.font.render("angle2: " + str(round(cset.angles[1], 2)), True, cset.circle_colors['red'])
+def update_text(angles, colors, font, window):
+    texts = [
+        ("angle1: ", angles[0], colors['green']),
+        ("angle2: ", angles[1], colors['red']),
+        ("angle3: ", angles[2], colors['blue']),
+    ]
 
-    # Create the text surface for angle3
-    cset.angle3_text = cset.font.render("angle3: " + str(round(cset.angles[2], 2)), True, cset.circle_colors['blue'])
-
-    # Get the rect object for angle1_text
-    cset.angle1_rect = cset.angle1_text.get_rect()
-
-    # Get the rect object for angle2_text
-    cset.angle2_rect = cset.angle2_text.get_rect()
-
-    # Get the rect object for angle3_text
-    cset.angle3_rect = cset.angle3_text.get_rect()
-
-    # Set the position of angle1_text in the upper right corner
-    cset.angle1_rect.topright = (cset.width - 30, 10)
-
-    # Set the position of line_2 len text below the angle text
-    cset.angle2_rect.topright = (cset.width - 30, cset.angle1_rect.bottom + 10)
-
-    # Set the position of line_3 len text below the line_2 text
-    cset.angle3_rect.topright = (cset.width - 30, cset.angle2_rect.bottom + 10)
-
-    # Draw the angle text on the window surface
-    cset.window.blit(cset.angle1_text, cset.angle1_rect)
-    cset.window.blit(cset.angle2_text, cset.angle2_rect)
-    cset.window.blit(cset.angle3_text, cset.angle3_rect)
+    for i, (text, angle, color) in enumerate(texts):
+        text_surface = font.render(text + str(round(angle, 2)), True, color)
+        text_rect = text_surface.get_rect()
+        text_rect.topright = (770, 10 + i * 30)
+        window.blit(text_surface, text_rect)
