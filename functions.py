@@ -37,7 +37,7 @@ def update_coords(angles, centerx, centery):
 
 
 def draw_circles(window, colors, circle_coords):
-    # Draw a circle with the center at (400, 400) or the center of the window
+    # Draw a circle at 400x 400y, radius 200, width 1
     pygame.draw.circle(window, colors['white'], (400, 400), 200, 1)
     # Draw circle2
     pygame.draw.circle(window, colors['green'], (circle_coords[0][0], circle_coords[0][1]), 150, 1)
